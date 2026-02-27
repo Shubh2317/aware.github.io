@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>AEL @ Shubhendu Bhardwaj — Home</title>
+  <meta name="description" content="Applied Electromagnetics Lab (AEL) — Group homepage, members, research, and publications." />
+  <meta name="theme-color" content="#0d3b66" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Applied Electromagnetics Lab (AEL)" />
+  <meta property="og:description" content="Group homepage, members, research, publications, and contact." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://YOUR_USERNAME.github.io/YOUR_REPO/" />
+  <meta property="og:image" content="https://YOUR_USERNAME.github.io/YOUR_REPO/assets/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (replace with your file in /assets) -->
+  <link rel="icon" href="assets/favicon.png" />
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --brand: #0d3b66;
+      --brand-2:#3a86ff;
+      --card:#f8fafc;
+      --border:#e2e8f0;
+      --link:#0d3b66;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root{
+        --bg:#0b1020;
+        --text:#e6edf3;
+        --muted:#a0aec0;
+        --brand:#66aaff;
+        --brand-2:#8bb8ff;
+        --card:#0f172a;
+        --border:#23314b;
+        --link:#8bb8ff;
+      }
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui,-apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif; line-height:1.6}
+    a{color:var(--link); text-decoration: none}
+    a:hover{ text-decoration: underline }
+    img{max-width:100%; height:auto; display:block}
+    .container{ width:min(1100px, 92%); margin-inline:auto; }
+
+    /* Header / Nav */
+    header {
+      position: sticky; top:0; z-index: 50;
+      backdrop-filter: blur(8px);
+      background: color-mix(in oklab, var(--bg) 80%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; padding: 0.9rem 0;
+    }
+    .brand{
+      display:flex; gap:.75rem; align-items:center; font-weight:700; letter-spacing:.2px;
+    }
+    .brand .logo{
+      width:36px; height:36px; border-radius:8px; background:linear-gradient(135deg, var(--brand), var(--brand-2));
+      display:grid; place-items:center; color:white; font-weight:800;
+    }
+    .nav ul{
+      list-style:none; display:flex; gap:1rem; margin:0; padding:0;
+    }
+    .nav a{ padding:.4rem .6rem; border-radius:8px }
+    .nav a:hover{ background:var(--card); text-decoration:none }
+
+    /* Hero */
+    .hero{ padding: 3.5rem 0 2rem }
+    .hero h1{ font-size: clamp(1.9rem, 2.6vw + 1rem, 3rem); margin:.2rem 0 }
+    .hero p{ color: var(--muted); max-width: 60ch }
+    .cta{ display:flex; gap:.75rem; margin-top:1rem; flex-wrap:wrap }
+    .btn{
+      display:inline-flex; align-items:center; gap:.5rem;
+      border:1px solid var(--border); padding:.6rem .85rem; border-radius:10px; font-weight:600; background:var(--card);
+    }
+    .btn.primary{ background:var(--brand); color:white; border-color:transparent }
+    .btn:hover{ filter:brightness(0.98); text-decoration:none }
+
+    /* Sections */
+    section{ padding: 2.2rem 0 }
+    section h2{
+      font-size: clamp(1.5rem, 1.6vw + .9rem, 2rem);
+      margin:0 0 1rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom:.5rem
+    }
+    .two-col{
+      display:grid; grid-template-columns: 1.1fr .9fr; gap:2rem;
+    }
+    @media (max-width: 880px){
+      .two-col{ grid-template-columns: 1fr; }
+    }
+
+    /* Cards / Members */
+    .grid{
+      display:grid; gap:1rem;
+      grid-template-columns: repeat( auto-fill, minmax(240px, 1fr) );
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem;
+      display:flex; gap:1rem; align-items: flex-start;
+    }
+    .avatar{
+      width:68px; height:68px; border-radius:12px; overflow:hidden; flex:0 0 auto;
+      background:#dbeafe; display:grid; place-items:center; color:#1e3a8a; font-weight:800;
+    }
+    .card h3{ margin:.2rem 0 .2rem; font-size:1.05rem }
+    .role{ color:var(--muted); font-size:.95rem }
+    .tags{ display:flex; gap:.35rem; flex-wrap:wrap; margin-top:.4rem }
+    .tag{ font-size:.78rem; background:white; border:1px solid var(--border); padding:.18rem .4rem; border-radius:999px }
+    .links{ margin-top:.5rem; display:flex; gap:.5rem; flex-wrap:wrap; }
+    .links a{ font-size:.9rem }
+
+    /* Footer */
+    footer{
+      padding:2.2rem 0; border-top:1px solid var(--border); color:var(--muted); font-size:.95rem
+    }
+    .small{ font-size:.9rem; color:var(--muted) }
+
+    /* Skip link for accessibility */
+    .skip-link {
+      position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip-link:focus {
+      position:static; width:auto; height:auto; padding:.5rem; background:var(--brand); color:white; border-radius:8px;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header>
+    <div class="container nav" role="navigation" aria-label="Main">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">A</div>
+        <div>
+          <div>Applied Electromagnetics Lab</div>
+          <div class="small">Shubhendu Bhardwaj</div>
+        </div>
+      </div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#members">Group Members</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HOME -->
+    <section id="home" class="hero container">
+      <h1>Applied Electromagnetics Lab (AEL)</h1>
+      <p>
+        We explore applied and computational electromagnetics, RF/microwave engineering,
+        antennas, metamaterials, and electromagnetic compatibility. Our group solves
+        fundamental and applied problems with real‑world impact.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#members">Meet the Group</a>
+        <a class="btn" href="#research">Explore Research</a>
+      </div>
+    </section>
+
+    <!-- GROUP MEMBERS -->
+    <section id="members" class="container">
+      <h2>Group Members</h2>
+
+      <div class="two-col">
+        <div>
+          <p class="small">
+            Below is a snapshot of our current team. To update this list, edit the
+            member cards in the HTML (or we can switch to a JSON file later).
+          </p>
+
+          <div class="grid" aria-live="polite">
+            <!-- Example Member Card -->
+            <article class="card">
+              <div class="avatar">
+                <!-- If you have a photo, replace with: <img src="assets/members/jane_doe.jpg" alt="Portrait of Jane Doe" width="68" height="68"> -->
+                JD
+              </div>
+              <div>
+                <h3>Jane Doe</h3>
+                <div class="role">Ph.D. Student • Antenna Design</div>
+                <div class="tags">
+                  <span class="tag">Metamaterials</span>
+                  <span class="tag">Optimization</span>
+                  <span class="tag">HFSS</span>
+                </div>
+                <div class="links">
+                  <a href="#" aria-label="Google Scholar for Jane Doe">Scholar</a>
+                  <a href="#" aria-label="LinkedIn for Jane Doe">LinkedIn</a>
+                  <a href="mailto:jdoe@example.edu">Email</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="avatar">AS</div>
+              <div>
+                <h3>Alex Singh</h3>
+                <div class="role">M.S. Student • EMC/EMI</div>
+                <div class="tags">
+                  <span class="tag">EMC</span>
+                  <span class="tag">Shielding</span>
+                </div>
+                <div class="links">
+                  <a href="#">Scholar</a>
+                  <a href="#">GitHub</a>
+                  <a href="mailto:asingh@example.edu">Email</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="avatar">RP</div>
+              <div>
+                <h3>Riya Patel</h3>
+                <div class="role">Undergraduate Researcher • RF Circuits</div>
+                <div class="tags">
+                  <span class="tag">RFIC</span>
+                  <span class="tag">Measurement</span>
+                </div>
+                <div class="links">
+                  <a href="#">LinkedIn</a>
+                  <a href="#">Portfolio</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Add more cards as needed -->
+          </div>
+        </div>
+
+        <aside>
+          <div class="card" style="flex-direction:column">
+            <h3>Open Positions</h3>
+            <p class="small">
+              We welcome motivated students. If you’re interested in antennas, RF, or computational EM,
+              send your CV, transcript, and a brief statement of interests.
+            </p>
+            <a class="btn" href="#contact">Contact the PI</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research" class="container">
+      <h2>Research</h2>
+      <div class="grid">
+        <div class="card" style="flex-direction:column">
+          <h3>Computational Electromagnetics</h3>
+          <p class="small">Fast modeling, optimization, and inverse design for EM problems.</p>
+        </div>
+        <div class="card" style="flex-direction:column">
+          <h3>Antennas & Arrays</h3>
+          <p class="small">Design and measurement of wideband, compact, and beam-steerable antennas.</p>
+        </div>
+        <div class="card" style="flex-direction:column">
+          <h3>EMC / EMI</h3>
+          <p class="small">Compatibility, shielding, and interference mitigation in complex systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="container">
+      <h2>Publications</h2>
+      <p class="small">Add selected publications here or link to a Google Scholar page.</p>
+      <ul>
+        <li><strong>Doe, J.</strong>, Singh, A., &amp; Bhardwaj, S. “Efficient Inverse Design for Metamaterial Antennas,” <em>IEEE TAP</em>, 2025.</li>
+        <li><strong>Patel, R.</strong> &amp; Bhardwaj, S. “EMC in Mixed-Signal Systems,” <em>EMC Magazine</em>, 2024.</li>
+      </ul>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching" class="container">
+      <h2>Teaching</h2>
+      <ul>
+        <li>EE XXX: Electromagnetic Waves and Applications</li>
+        <li>EE YYY: Antennas and Propagation</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <div class="two-col">
+        <div>
+          <p>
+            <strong>Dr. Shubhendu Bhardwaj</strong><br>
+            Associate Professor<br>
+            <!-- Your department and university -->
+          </p>
+          <p>
+            Email: <a href="mailto:YOUR_EMAIL@university.edu">YOUR_EMAIL@university.edu</a><br>
+            Scholar: <a href="https://scholar.google.com/">Google Scholar</a><br>
+            LinkedIn: <a href="#">Profile</a>
+          </p>
+        </div>
+        <div class="card" style="flex-direction:column">
+          <h3>Find Us</h3>
+          <p class="small">
+            Lab location, building, and address here.
+          </p>
+          <a class="btn" href="https://maps.google.com" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div>© <span id="year"></span> Applied Electromagnetics Lab (AEL). All rights reserved.</div>
+      <div class="small">Site generated for GitHub Pages. Last updated <span id="updated"></span>.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Set year + last updated for convenience
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const d = new Date(document.lastModified);
+    document.getElementById('updated').textContent = d.toLocaleDateString(undefined,
+      {year:'numeric', month:'short', day:'2-digit'});
+
+    // Optional: smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el){
+          e.preventDefault();
+          el.scrollIntoView({behavior:'smooth', block:'start'});
+          history.pushState(null, '', '#'+id);
+        }
+      })
+    });
+  </script>
+</body>
+</html>
