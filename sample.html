@@ -25,25 +25,57 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header>
-    <div class="container nav" role="navigation" aria-label="Main">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">A</div>
-        <div>
-          <div> AWARE Lab</div>
-          <div class="small">Shubhendu Bhardwaj</div>
-        </div>
+<header>
+  <div class="container nav" role="navigation" aria-label="Main">
+    <div class="brand" style="display: flex; align-items: center; gap: 10px;">
+      
+      <!-- Logo SVG -->
+      <div class="logo" aria-hidden="true">
+        <svg width="60" height="60" viewBox="0 0 650 220" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100%" height="100%" fill="#FFFFFF"/>
+          <!-- A Letter (Red) -->
+          <text x="60" y="145" font-family="Helvetica, Arial, sans-serif" 
+                font-size="115" font-weight="600" fill="#C1121F" letter-spacing="3">
+            A
+          </text>
+          <!-- WARE Text -->
+          <text x="155" y="145" font-family="Helvetica, Arial, sans-serif" 
+                font-size="120" font-weight="500" fill="#111111" letter-spacing="6">
+            WARE
+          </text>
+          <!-- Electromagnetic Orbits -->
+          <ellipse cx="120" cy="100" rx="65" ry="32"
+                   fill="none" stroke="#C1121F" stroke-width="1.8"
+                   opacity="0.75"
+                   transform="rotate(-10 120 100)" />
+          <ellipse cx="120" cy="100" rx="85" ry="48"
+                   fill="none" stroke="#C1121F" stroke-width="1.3"
+                   opacity="0.55"
+                   transform="rotate(-10 120 100)" />
+          <ellipse cx="120" cy="100" rx="105" ry="62"
+                   fill="none" stroke="#C1121F" stroke-width="1"
+                   opacity="0.35"
+                   transform="rotate(-10 120 100)" />
+        </svg>
       </div>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#members">Group Members</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#teaching">Teaching</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+
+      <!-- Text next to logo -->
+      <div>
+        <div style="font-weight: 700; font-size: 1.2rem;">AWARE Lab</div>
+        <div class="small" style="font-size: 0.9rem;">Shubhendu Bhardwaj</div>
+      </div>
     </div>
-  </header>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#members">Group Members</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
 
   <main id="main">
     <!-- HOME -->
