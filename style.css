@@ -114,8 +114,8 @@
       position:static; width:auto; height:auto; padding:.5rem; background:var(--brand); color:white; border-radius:8px;
     }
 
-research-section {
-  padding: 2.2rem 0;   /* same vertical rhythm as other sections */
+/* research-section {
+  padding: 2.2rem 0;  
 }
 
 .research-section .container {
@@ -137,7 +137,7 @@ research-section {
 }
 
 /* Alternate layout */
-.research-block.reverse {
+/*.research-block.reverse {
   flex-direction: row-reverse;
 }
 
@@ -151,5 +151,5 @@ research-section {
   max-width: 500px;
   border-radius: 12px;
 }
-
+*/
 
