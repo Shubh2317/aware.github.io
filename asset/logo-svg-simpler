@@ -1,0 +1,93 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Main AWARE gradient -->
+    <linearGradient id="awareGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d3b66"/>
+      <stop offset="100%" stop-color="#3a86ff"/>
+    </linearGradient>
+
+    <!-- Wave gradient -->
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0d3b66"/>
+      <stop offset="100%" stop-color="#3a86ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Wireless arcs -->
+  <path d="M650 240 Q800 140 950 240"
+        stroke="url(#awareGradient)"
+        stroke-width="10"
+        fill="none"/>
+
+  <path d="M690 255 Q800 180 910 255"
+        stroke="#3a86ff"
+        stroke-width="8"
+        fill="none"
+        opacity="0.8"/>
+
+  <path d="M730 270 Q800 215 870 270"
+        stroke="#0d3b66"
+        stroke-width="6"
+        fill="none"
+        opacity="0.7"/>
+
+  <!-- Tower -->
+  <polygon points="770,320 830,320 810,420 790,420"
+           fill="#0d3b66"/>
+
+  <line x1="800" y1="320" x2="800" y2="420"
+        stroke="#ffffff"
+        stroke-width="4"/>
+
+  <circle cx="800" cy="305" r="10" fill="#3a86ff"/>
+
+  <!-- AWARE Text -->
+  <text x="800" y="580"
+        font-family="Montserrat, Arial, sans-serif"
+        font-size="200"
+        font-weight="700"
+        text-anchor="middle"
+        fill="url(#awareGradient)">
+        AWARE
+  </text>
+
+  <!-- Under wave -->
+  <path d="M400 640 Q600 700 800 660 Q1000 620 1200 660"
+        stroke="url(#waveGradient)"
+        stroke-width="8"
+        fill="none"/>
+
+  <!-- Line end dot -->
+  <circle cx="1200" cy="660" r="8" fill="#3a86ff"/>
+
+  <!-- Lab Name Line 1 -->
+  <text x="800" y="760"
+        font-family="Montserrat, Arial, sans-serif"
+        font-size="60"
+        letter-spacing="4"
+        text-anchor="middle"
+        fill="#0f172a">
+        ADVANCED EM AND WIRELESS
+  </text>
+
+  <!-- Lab Name Line 2 -->
+  <text x="800" y="830"
+        font-family="Montserrat, Arial, sans-serif"
+        font-size="60"
+        letter-spacing="4"
+        text-anchor="middle"
+        fill="#0f172a">
+        APPLICATIONS RESEARCH LAB
+  </text>
+
+  <!-- Bottom accent line -->
+  <line x1="600" y1="880"
+        x2="1000" y2="880"
+        stroke="#3a86ff"
+        stroke-width="5"/>
+
+</svg>
