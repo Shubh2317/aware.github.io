@@ -1,6 +1,7 @@
 # layout: page
-$$ title: "PAGE-TITLE"
+## title: "PAGE-TITLE"
 * permalink: /URL-PATH
     * level 2
 
-Content on this new page.
+#### New heading
+# new 
