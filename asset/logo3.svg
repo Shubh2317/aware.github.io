@@ -1,47 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="200" viewBox="0 0 520 200">
-  <!-- Stylized A with antenna + EM waves -->
-  <g transform="translate(40,20)">
-    <!-- A shape -->
-    <path d="M60 150 L20 0 L0 0 L50 170 L70 170 L120 0 L100 0 Z"
-          fill="#1E293B"/>
-    <!-- Crossbar -->
-    <rect x="32" y="70" width="56" height="10" rx="5" fill="#1E293B"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="700" height="250" viewBox="0 0 700 250" xmlns="http://www.w3.org/2000/svg">
 
-    <!-- EM / wireless arcs -->
-    <path d="M85 40 A45 45 0 0 1 145 100"
-          fill="none" stroke="#3B82F6" stroke-width="6" stroke-linecap="round"/>
-    <path d="M80 20 A65 65 0 0 1 165 105"
-          fill="none" stroke="#22C55E" stroke-width="6" stroke-linecap="round"/>
-    <path d="M75 0 A85 85 0 0 1 185 110"
-          fill="none" stroke="#F97316" stroke-width="6" stroke-linecap="round"/>
+  <!-- Background -->
+  <rect width="700" height="250" fill="#ffffff"/>
 
-    <!-- Node at base -->
-    <circle cx="60" cy="150" r="8" fill="#3B82F6"/>
+  <!-- Wireless signal integrated into A -->
+  <g transform="translate(120,125)">
+    
+    <!-- Stylized A -->
+    <path d="M-40 50 L0 -50 L40 50" 
+          fill="none" 
+          stroke="#111111" 
+          stroke-width="10" 
+          stroke-linecap="round" 
+          stroke-linejoin="round"/>
+    
+    <line x1="-20" y1="5" x2="20" y2="5" 
+          stroke="#111111" 
+          stroke-width="8" 
+          stroke-linecap="round"/>
+    
+    <!-- Minimal EM wave arcs -->
+    <path d="M0 -70 A70 70 0 0 1 0 70" 
+          fill="none" 
+          stroke="#3A86FF" 
+          stroke-width="4" 
+          stroke-linecap="round"/>
+          
+    <path d="M0 -50 A50 50 0 0 1 0 50" 
+          fill="none" 
+          stroke="#3A86FF" 
+          stroke-width="3" 
+          stroke-linecap="round"/>
+
   </g>
 
-  <!-- Wordmark -->
-  <text x="200" y="105"
-        font-family="Segoe UI, sans-serif"
-        font-size="64"
-        font-weight="700"
-        letter-spacing="6"
-        fill="#0F172A">
-    AWARE
+  <!-- Text -->
+  <text x="200" y="145"
+        font-family="Helvetica, Arial, sans-serif"
+        font-size="72"
+        font-weight="600"
+        fill="#111111"
+        letter-spacing="4">
+    WARE
   </text>
 
-  <!-- Subtitle -->
-  <text x="205" y="135"
-        font-family="Segoe UI, sans-serif"
-        font-size="18"
-        letter-spacing="3"
-        fill="#64748B">
-    Wireless & Electromagnetics Research Lab
+  <!-- Subtext -->
+  <text x="205" y="185"
+        font-family="Helvetica, Arial, sans-serif"
+        font-size="20"
+        fill="#666666"
+        letter-spacing="2">
+    Wireless & Electromagnetics Lab
   </text>
 
-  <!-- Accent underline -->
-  <line x1="200" y1="145" x2="380" y2="145"
-        stroke="#3B82F6" stroke-width="4" stroke-linecap="round" stroke-opacity="0.8"/>
-  <line x1="200" y1="152" x2="300" y2="152"
-        stroke="#22C55E" stroke-width="4" stroke-linecap="round" stroke-opacity="0.8"/>
 </svg>
-
