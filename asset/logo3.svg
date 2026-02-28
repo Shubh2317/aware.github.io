@@ -1,76 +1,47 @@
-<svg width="480" height="180" viewBox="0 0 480 180" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background (optional, can remove) -->
-  <rect x="0" y="0" width="480" height="180" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="200" viewBox="0 0 520 200">
+  <!-- Stylized A with antenna + EM waves -->
+  <g transform="translate(40,20)">
+    <!-- A shape -->
+    <path d="M60 150 L20 0 L0 0 L50 170 L70 170 L120 0 L100 0 Z"
+          fill="#1E293B"/>
+    <!-- Crossbar -->
+    <rect x="32" y="70" width="56" height="10" rx="5" fill="#1E293B"/>
 
-  <!-- Stylized antenna / A icon -->
-  <g transform="translate(60,35)">
-    <!-- A-shaped mast -->
-    <path d="M40 100 L10 0 L0 0 L30 110 L50 110 L80 0 L70 0 Z"
-          fill="#1F2933"/>
-    <!-- Crossbar of A -->
-    <rect x="18" y="45" width="44" height="8" rx="4" fill="#1F2933"/>
+    <!-- EM / wireless arcs -->
+    <path d="M85 40 A45 45 0 0 1 145 100"
+          fill="none" stroke="#3B82F6" stroke-width="6" stroke-linecap="round"/>
+    <path d="M80 20 A65 65 0 0 1 165 105"
+          fill="none" stroke="#22C55E" stroke-width="6" stroke-linecap="round"/>
+    <path d="M75 0 A85 85 0 0 1 185 110"
+          fill="none" stroke="#F97316" stroke-width="6" stroke-linecap="round"/>
 
-    <!-- Wireless / EM waves -->
-    <!-- Inner arc -->
-    <path d="M55 30
-             A30 30 0 0 1 95 70"
-          fill="none"
-          stroke="#3B82F6"
-          stroke-width="4"
-          stroke-linecap="round"/>
-    <!-- Middle arc -->
-    <path d="M50 18
-             A42 42 0 0 1 108 76"
-          fill="none"
-          stroke="#22C55E"
-          stroke-width="4"
-          stroke-linecap="round"/>
-    <!-- Outer arc -->
-    <path d="M45 6
-             A54 54 0 0 1 121 82"
-          fill="none"
-          stroke="#F97316"
-          stroke-width="4"
-          stroke-linecap="round"/>
-    <!-- Small node at base (lab / sensor feel) -->
-    <circle cx="40" cy="100" r="6" fill="#3B82F6"/>
+    <!-- Node at base -->
+    <circle cx="60" cy="150" r="8" fill="#3B82F6"/>
   </g>
 
-  <!-- Wordmark: AWARE -->
-  <g transform="translate(170,105)">
-    <!-- AWARE text -->
-    <text x="0" y="0"
-          font-family="Segoe UI, system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
-          font-size="54"
-          font-weight="600"
-          letter-spacing="4"
-          fill="#111827">
-      AWARE
-    </text>
+  <!-- Wordmark -->
+  <text x="200" y="105"
+        font-family="Segoe UI, sans-serif"
+        font-size="64"
+        font-weight="700"
+        letter-spacing="6"
+        fill="#0F172A">
+    AWARE
+  </text>
 
-    <!-- Subtitle: research lab -->
-    <text x="4" y="26"
-          font-family="Segoe UI, system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
-          font-size="16"
-          font-weight="400"
-          letter-spacing="3"
-          fill="#6B7280"
-          text-transform="uppercase">
-      wireless & electromagnetics research lab
-    </text>
-  </g>
+  <!-- Subtitle -->
+  <text x="205" y="135"
+        font-family="Segoe UI, sans-serif"
+        font-size="18"
+        letter-spacing="3"
+        fill="#64748B">
+    Wireless & Electromagnetics Research Lab
+  </text>
 
-  <!-- Subtle underline accent under AWARE -->
-  <g transform="translate(170,120)">
-    <line x1="0" y1="18" x2="210" y2="18"
-          stroke="#3B82F6"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-opacity="0.7"/>
-    <line x1="0" y1="22" x2="120" y2="22"
-          stroke="#22C55E"
-          stroke-width="3"
-          stroke-linecap="round"
-          stroke-opacity="0.7"/>
-  </g>
+  <!-- Accent underline -->
+  <line x1="200" y1="145" x2="380" y2="145"
+        stroke="#3B82F6" stroke-width="4" stroke-linecap="round" stroke-opacity="0.8"/>
+  <line x1="200" y1="152" x2="300" y2="152"
+        stroke="#22C55E" stroke-width="4" stroke-linecap="round" stroke-opacity="0.8"/>
 </svg>
+
